@@ -6,10 +6,10 @@
 #include <cmath>
 #include "mylib.cpp"
 
+
 using namespace std;
 
 int main(){
-	// TODO:  Use this help develop your mylib.cpp functions.
-	cout << "Print whatever you like\n";
-	return 0;
+cout << systSine(45) << endl;
+cout << myCosine(45) << endl;
 }
