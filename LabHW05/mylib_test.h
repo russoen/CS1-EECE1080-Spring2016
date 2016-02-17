@@ -6,6 +6,7 @@
 #include <iostream>
 #include <cxxtest/TestSuite.h>
 
+
 using namespace std;
 
 // This requires CxxTest to be installed!
@@ -59,7 +60,7 @@ public:
   void testDTR5(){
     TS_ASSERT_DELTA(degreesToRadians(60),1.0471, 0.0001);
   }
-    void testDTR6(){
+  void testDTR6(){
     TS_ASSERT_DELTA(degreesToRadians(120),2.0943, 0.0001);
   }
 
@@ -86,80 +87,79 @@ public:
 
 //Test System Sine function
     void testSystemSine1(){
-    TS_ASSERT_DELTA(systSine(45),.7071, 0.0001);
+    TS_ASSERT_DELTA(systSine(.7854),.7071, 0.0001);
   }
     void testSystemSine2(){
     TS_ASSERT_DELTA(systSine(0),0.0, 0.0001);
   }
     void testSystemSine3(){
-    TS_ASSERT_DELTA(systSine(90),1.0000, 0.0001);
+    TS_ASSERT_DELTA(systSine(1.5708),1.0000, 0.0001);
   }  
     void testSystemSine4(){
-    TS_ASSERT_DELTA(systSine(-90),-1.0000, 0.0001);
+    TS_ASSERT_DELTA(systSine(-1.5708),-1.0000, 0.0001);
   }
     void testSystemSine5(){
-    TS_ASSERT_DELTA(systSine(360),0.0000, 0.0001);
+    TS_ASSERT_DELTA(systSine(6.2832),0.0000, 0.0001);
   }
     void testSystemSine6(){
-    TS_ASSERT_DELTA(systSine(270),-1.0000, 0.0001);
+    TS_ASSERT_DELTA(systSine(4.7124),-1.0000, 0.0001);
   }
   
 //Test My Sine function
     void testmySine1(){
-    TS_ASSERT_DELTA(mySine(45),.7071, 0.0001);
+    TS_ASSERT_DELTA(mySine(.7854),.7071, 0.0001);
   }
     void testmySine2(){
     TS_ASSERT_DELTA(mySine(0),0.0, 0.0001);
   }
     void testmySine3(){
-    TS_ASSERT_DELTA(mySine(90),1.0000, 0.0001);
+    TS_ASSERT_DELTA(mySine(1.5708),1.0000, 0.0001);
   }  
     void testmySine4(){
-    TS_ASSERT_DELTA(mySine(-90),-1.0000, 0.0001);
+    TS_ASSERT_DELTA(mySine(-1.5708),-1.0000, 0.0001);
   }
     void testmySine5(){
-    TS_ASSERT_DELTA(mySine(360),0.0000, 0.0001);
+    TS_ASSERT_DELTA(mySine(6.2832),0.0000, 0.0001);
   }
     void testmySine6(){
-    TS_ASSERT_DELTA(mySine(270),-1.0000, 0.0001);
+    TS_ASSERT_DELTA(mySine(4.7124),-1.0000, 0.0001);
   }
-/Test System Cosine Function
+//Test System Cosine Function
     void testsystemCosine1(){
-    TS_ASSERT_DELTA(systCosine(45),.5253, 0.0001);
+    TS_ASSERT_DELTA(systCosine(.7854),0.7071, 0.0001);
   }
     void testsystemCosine2(){
     TS_ASSERT_DELTA(systCosine(0),1.0000, 0.0001);
   }
     void testsystemCosine3(){
-    TS_ASSERT_DELTA(systCosine(90),0.0000, 0.0001);
+    TS_ASSERT_DELTA(systCosine(1.5708),0.0000, 0.0001);
   }
     void testsystemCosine4(){
-    TS_ASSERT_DELTA(systCosine(180),-1.0000, 0.0001);
+    TS_ASSERT_DELTA(systCosine(3.1416),-1.0000, 0.0001);
   }
     void testsystemCosine5(){
-    TS_ASSERT_DELTA(systCosine(-45),-.7071, 0.0001);
+    TS_ASSERT_DELTA(systCosine(-.7854),0.7071, 0.0001);
   }
 
 //Test my Cosine function
     void testMyCosine1(){
-    TS_ASSERT_DELTA(myCosine(45),.7071, 0.0001);
+    TS_ASSERT_DELTA(myCosine(.7854),.7071, 0.0001);
   }
     void testMyCosine2(){
     TS_ASSERT_DELTA(myCosine(0),1.0000, 0.0001);
   }
     void testMyCosine3(){
-    TS_ASSERT_DELTA(myCosine(90),0.0000, 0.0001);
+    TS_ASSERT_DELTA(myCosine(1.5708),0.0000, 0.0001);
   }
     void testMyCosine4(){
-    TS_ASSERT_DELTA(myCosine(180),-1.0000, 0.0001);
+    TS_ASSERT_DELTA(myCosine(3.1416),-1.0000, 0.0001);
   }
     void testMyCosine5(){
-    TS_ASSERT_DELTA(myCosine(-45),.7071, 0.0001);
+    TS_ASSERT_DELTA(myCosine(-.7854),.7071, 0.0001);
   }
 
 
 //End 
 };
-
 
 #endif
