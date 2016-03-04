@@ -26,7 +26,7 @@ bool createBoat(char boatArray[][BOARD_SIZE],int x, int y, int orientation, int 
   if(orientation != 0 && orientation != 1){
     return false;
   }
-  if((x<0||y<0)||(x > (BOARD_SIZE) || y > (BOARD_SIZE))){
+  if((x < 0 || y < 0)||(x > (BOARD_SIZE) || y > (BOARD_SIZE))){
     return false;
   }
   if(orientation == 0 && (x+1+boat_length) > BOARD_SIZE){ //boat outside bounds(too far right)
@@ -101,13 +101,9 @@ bool hasLost(char boatArray[][BOARD_SIZE]){
 // Note to use HIT, MISS, and BOAT char constants in the array.
 // It is OK to cout a message to the user, but not required.
 bool isHit(char boatArray[][BOARD_SIZE],int x, int y){
-  if(x > BOARD_SIZE || x < 0 || y > BOARD_SIZE || y < 0){
+  if((x > BOARD_SIZE-1 || x < 0 || y > BOARD_SIZE-1 || y < 0) || (boatArray[y][x] == HIT||boatArray[y][x] == MISS)){
     return false;
   }
-  if(boatArray[y][x] == HIT||boatArray[y][x] == MISS){
-    return false;
-  }
-  
   if(boatArray[y][x] != BOAT){
     boatArray[y][x] = MISS;
     return false;
