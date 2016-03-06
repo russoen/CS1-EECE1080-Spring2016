@@ -30,8 +30,16 @@ int main(int argc, char* argv[]){
     buffer << inFile.rdbuf();
     file_string = buffer.str();
     
-    // TODO: Fill me in. file_string contains the file.
-    
+    cout << "NumLines: " << numLines(file_string) << endl;
+    cout << "Uppercase: " << upperCaseChars(file_string) << endl;
+    cout << "Lowercase: " << lowerCaseChars(file_string) << endl;
+    cout << "NumPunct: " << numPunct(file_string) << endl;
+    cout << "NumWords: " << numWords(file_string) << endl;
+    cout << "Character Counts: \n";
+    vector<int> counts = characterCounts(file_string);
+    for(char letter = 'a'; letter <= 'z'; letter++){
+      cout << letter << ": " << counts[letter - 'a'] << endl;
+    }
   }else{
     cout << "No input file given." << endl << endl;
   }
