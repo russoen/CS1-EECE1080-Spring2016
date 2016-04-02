@@ -32,8 +32,14 @@ class Crypto{
   private:
   Crypto(); // By placing the default constructor in private, we REQUIRE
   // users to use the other constructor.
-  
-  // TODO: Fill me in.  
+  string key;
+  int ascii(const string &key){
+    int j = 0;
+    for(unsigned int i = 0; i < key.length(); i++){
+      j += static_cast<int>(key[i]); //c++ way to convert chars
+    }
+    return j % 26;
+  }
   // Hint: you'll need one private variable and possibly a few private functions.
   // Remember, don't copy code in different functions: write a common function
   // and call it with different parameters.  Hint: what is the difference between
