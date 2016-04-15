@@ -77,11 +77,14 @@ class LListR{
     return getAt(pos-1, node->next);
   }
 
-
-  unsigned int size() const{
-    // TODO: Fill me in.  You will likely need to create another
-   // function!
-    return 0;
+  unsigned int size_helper(nodeR_t *temp)const{
+    if(temp == NULL)return 0;
+    return size_helper(temp->next) +1;
+  }
+  unsigned int size() const{ // returns length of linked list
+    nodeR_t *temp = head;
+    if(temp == NULL)return 0;
+    return size_helper(temp);
   }
  
  
@@ -127,9 +130,24 @@ class LListR{
     delete temp;
   }
   
+  void pop_back_helper(nodeR_t *temp){
+    nodeR_t *temp2 = temp->next;
+    if(temp2->next == NULL){
+      delete temp2;
+      temp->next = NULL;
+      return;
+    }return pop_back_helper(temp2);
+  }
+    
   void pop_back(){
-   // TODO: Fill me in. You will likely need to create another
-   // function!
+    nodeR_t *temp = head;
+    if(temp == NULL) return;
+    if(temp->next == NULL){
+      delete temp;
+      head = NULL; //because there is now nothing in the list
+      return;
+    }
+    return pop_back_helper(temp);
   }
 	
 	void setAt(int value, unsigned pos){
@@ -175,12 +193,17 @@ class LListR{
 	  reverseHelp(node->next, other);
 	}
 	
-	
+	bool equal_helper(nodeR_t* temp1, nodeR_t* temp2)const{
+	  if(temp1 == NULL && temp2 != NULL) return false;
+	  if(temp1 != NULL && temp2 == NULL) return false;
+	  if(temp1 == NULL && temp2 == NULL) return true;
+	  if(temp1->data == temp2->data) return equal_helper(temp1->next, temp2->next);
+	  return false;
+	}
 	
 	bool operator==(const LListR& other) const{
-	 // TODO: Fill me in.  You will likely need to create another
-   // function!
-   return true;
+   //Return true if the current linked-list contains identical values to the passed one.
+   return equal_helper(head, other.head);
 	}
 	
 	bool operator!=(const LListR& other) const{
