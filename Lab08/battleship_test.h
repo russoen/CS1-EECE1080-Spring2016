@@ -145,7 +145,7 @@ public:
     }
   }
   
-  // Fill up the board and verify it eventually can't add boats.
+  // Fill up the board and verify it eventually can't add boats(returns false).
   // Note placeAIBoats likely will start to fail earlier due to boat shape.
   void testBoats3() {
     for(int run = 1; run <= BOARD_SIZE * BOARD_SIZE / 14; run++){

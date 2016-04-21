@@ -13,7 +13,6 @@ using namespace std;
 
 int main(int argc, char* argv[]){
   if(argc == 2){  // A parameter was given!
-  
     int numbers[100000];
     int number = 0; 
     unsigned int count = 0;
@@ -28,13 +27,18 @@ int main(int argc, char* argv[]){
     }
     // Pull off numbers while we can.  This will stop at the end of the file.
     while(inFile >> number){
-      // TODO: Change this loop slightly
-      cout << count << ":" << number << endl;
+      numbers[count] = number;
       count++;
-    }  
-    
-    // TODO: Fill in here.
-    
+     }
+      cout << "Count: " << count << endl;
+      cout << "Sum: " << arrSum(numbers, count) << endl;
+      cout << "Mean: " << arrMean(numbers, count) << endl;
+      cout << "Min: " << arrMin(numbers, count) << endl;
+      cout << "Max: " << arrMax(numbers, count) << endl;
+      cout << "StdDev: " << arrStdDev(numbers, count) << endl;
+      cout << "Num Primes: " << arrNumPrimes(numbers, count)<< endl;
+      cout << "Set Size: " << arrSetSize(numbers, count)<< endl;
+
   }else{
     cout << "No parameters, or more than one parameter given.\n";
   }
@@ -42,3 +46,4 @@ int main(int argc, char* argv[]){
 
   return 0;
 }
+

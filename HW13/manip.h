@@ -10,43 +10,49 @@
 #include "Pointers.h"
 
 void manip1(Pointers* p){
-  // TODO: Fill me in
+  *(p->getA()) = 10;
 }
 
 void manip2(Pointers* p){
-  // TODO: Fill me in
+  *(p->getB()) = 45;
 }
 
 void manip3(Pointers* p){
-  // TODO: Fill me in
+  *(p->getB()) = *(p->getA());
 }
 
 void manip4(Pointers* p, int* other){
-  // TODO: Fill me in
+  (p->setB(other));
 }
 
 void manip5(Pointers* p, int* other){
-  // TODO: Fill me in
+  *(p->getB()) = 45;
+  p->setC();
+  p->getC();
 }
 
 void manip6(Pointers* p){
-  // TODO: Fill me in
+  *(p->getB() + 2) = 10;
 }
 
 void manip7(Pointers* p){
-  // TODO: Fill me in
+  *(p->getB()) = 15;
 }
 
 void manip8(Pointers* p){
-  // TODO: Fill me in
+  *(p->getA()) = 199;
+  (p->setB(p->getA()));
+  p->setC();
 }
 
 void manip9(Pointers* p, int* other){
-  // TODO: Fill me in
+  p->setB(other);
 }
 
 void manip10(Pointers* p){
-  // TODO: Fill me in
+  *(p->getA()) = 199;  
+  (*(p+5)).setB(p->getA());
+  (*(p+5)).setC();
 }
 
 #endif

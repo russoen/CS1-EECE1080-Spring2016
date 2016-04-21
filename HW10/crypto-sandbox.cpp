@@ -16,24 +16,24 @@ using namespace std;
 
 int main(int argc, char* argv[]){
   // Uncomment this code below to play with your Crypto class.
-  /*
-  Crypto a("password");
   
-  string input = "This is a test!";
+  Crypto a("bacon");
+  
+  string input = "Meet me at the park at eleven am";
   cout << input << endl;
-  cout << a.caesarEncrypt(input) << endl;
-  cout << a.caesarDecrypt(a.caesarEncrypt(input)) << endl;
+  cout << "Caesar encrypt: " << a.caesarEncrypt(input) << endl;
+  cout << "Caesar decrypt: " << a.caesarDecrypt(a.caesarEncrypt(input)) << endl;
   
   cout << "input std: " << a.letterFreqStDev(input) << endl;
   cout << "encrypted std: " << a.letterFreqStDev(a.caesarEncrypt(input)) << endl;
   
-  cout << a.vigenereEncrypt(input) << endl;
-  cout << a.vigenereDecrypt(a.vigenereEncrypt(input)) << endl;
+  cout << "Vigenere Encrypt: " << a.vigenereEncrypt(input) << endl;
+  cout << "Vigenere Decrypt:" << a.vigenereDecrypt(a.vigenereEncrypt(input)) << endl;
   
   cout << "input std: " << a.letterFreqStDev(input) << endl;
   cout << "encrypted std: " << a.letterFreqStDev(a.vigenereEncrypt(input)) << endl;
   return 0;
-  */
+  
   
   if(argc == 5){  // A parameters were given!
   

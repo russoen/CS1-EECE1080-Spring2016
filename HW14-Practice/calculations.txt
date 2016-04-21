@@ -1,0 +1,32 @@
+PRISM
+baseArea = 25, basePerimeter = 24, length = 12
+volume = baseArea*length
+       = 25 * 12
+       = 300
+surface area = 2 * baseArea + basePerimeter * Length
+         	 	 = 2 * 25 + 24 * 12 
+         	 	 = 338
+
+
+
+PYRAMID
+baseArea = 28, basePerimeter = 20, slantHeight = 5, pyrHeight = 4.5;
+Surface Area  = baseArea +  12 * basePerimeter * slantHeight
+           	 	= 28 +  12 * 20 * 5
+           	 	= 78
+
+Volume	 	=  (1/3) * baseArea * Height
+       	 	=  13 * 28 * 4.5
+       	 	= 42
+
+
+
+CUBOID
+width = 5, length = 10, height = 4
+volume = length*width*height
+ 	     = 10*5*4
+ 	     = 200
+surface area = 2*width*length + 2*length*height + 2*height*width
+           	 = 2*5*10 + 2*10*4 + 2*4*5
+           	 = 100 + 80 + 40 
+           	 = 220
