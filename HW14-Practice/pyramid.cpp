@@ -4,50 +4,48 @@
 //Surface Area =  [Base Area] +  12 × Perimeter × [slantHeight]
 //Volume = (1/3) × [Base Area] × Height
 // *height = top to bottom height
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
 class Pyramid{
-  private:
-    double baseArea; 
-    double basePerimeter;
-    double slantHeight;
-    double pyrHeight;
+private:
+double baseArea; 
+double basePerimeter;
+double slantHeight;
+double pyrHeight;
+public:
+Pyramid(){
+baseArea = 0.0; 
+basePerimeter = 0.0;
+slantHeight = 0.0;
+pyrHeight = 0.0;
+}
 
-  public:
-  Pyramid(){
-    baseArea = 0.0; 
-    basePerimeter = 0.0;
-    slantHeight = 0.0;
-    pyrHeight = 0.0;
-  }
-//  Pyramid(){}
-  
-  //setters
-  void setArea(double area){
-    baseArea = area;
-  }
-  void setPerimeter(double perimeter){
-    basePerimeter = perimeter;
-  }
-  void setSlant(double slant){
-    slantHeight = slant;
-  }
-  void setHeight(double height){
-    pyrHeight = height;
-  }
-  
-  //getters
-  double getSurfaceArea(){
-  //Surface Area =  [Base Area] +  12 × Perimeter × [slantHeight]  
-    return baseArea + (1./2.) * basePerimeter * slantHeight;
-  }
+//setters
+void setArea(double area){
+  baseArea = area;
+}
+void setPerimeter(double perimeter){
+  basePerimeter = perimeter;
+}
+void setSlant(double slant){
+  slantHeight = slant;
+}
+void setHeight(double height){
+  pyrHeight = height;
+}
 
-  double getVolume(){
-  //Volume = (1/3) × Base Area × Height
-    return (1./3.) * baseArea * pyrHeight;
-  }
+//getters
+double getSurfaceArea(){
+//Surface Area =  [Base Area] +  12 × Perimeter × [slantHeight]  
+  return baseArea + (1./2.) * basePerimeter * slantHeight;
+}
+
+double getVolume(){
+//Volume = (1/3) × Base Area × Height
+  return (1./3.) * baseArea * pyrHeight;
+}
 };
 
 

@@ -4,16 +4,16 @@
 //w = width, l = length, h = height
 //Surface Area = 2wl + 2lh + 2hw
 //Volume = lwh
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
-  double getSA(double width, double length, double height){
-    return 2.0*width*length+2.0*length*height+2.0*height*width;
-  }
-  double getVolume(double width, double length, double height){
-    return length*width*height;
-  }
+double getSA(double width, double length, double height){
+  return 2.0*width*length+2.0*length*height+2.0*height*width;
+}
+double getVolume(double width, double length, double height){
+  return length*width*height;
+}
 
 
 int main(){
